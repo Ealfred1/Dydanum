@@ -3,6 +3,67 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* Custom Fonts */
+@font-face {
+  font-family: 'Nohemi';
+  src: url('/fonts/Nohemi-Regular-BF6438cc579d934.woff') format('woff'),
+       url('/fonts/Nohemi-Regular-BF6438cc58b98fc.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nohemi';
+  src: url('/fonts/Nohemi-Medium-BF6438cc57ddecd.woff') format('woff'),
+       url('/fonts/Nohemi-Medium-BF6438cc581a509.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nohemi';
+  src: url('/fonts/Nohemi-SemiBold-BF6438cc57db2ff.woff') format('woff'),
+       url('/fonts/Nohemi-SemiBold-BF6438cc588a48a.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nohemi';
+  src: url('/fonts/Nohemi-Bold-BF6438cc577b524.woff') format('woff'),
+       url('/fonts/Nohemi-Bold-BF6438cc5812315.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SF Pro';
+  src: url('/fonts/SFPRODISPLAYREGULAR.OTF') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SF Pro';
+  src: url('/fonts/SFPRODISPLAYMEDIUM.OTF') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SF Pro';
+  src: url('/fonts/SFPRODISPLAYBOLD.OTF') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   /* Enhanced Dyadnum Dark Theme */
   --background: oklch(1 0 0);
@@ -142,6 +203,14 @@
 }
 
 @layer utilities {
+  .font-sf-pro {
+    font-family: 'SF Pro', system-ui, -apple-system, sans-serif;
+  }
+  
+  .font-nohemi {
+    font-family: 'Nohemi', system-ui, -apple-system, sans-serif;
+  }
+
   .glass {
     background: var(--glass-bg);
     backdrop-filter: var(--glass-blur);
@@ -195,6 +264,42 @@
   .section-darker {
     background: #050505;
   }
+
+  /* Monochrome noise effect */
+  .noise-effect {
+    position: relative;
+  }
+
+  .noise-effect::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+      radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0.5px, transparent 0.5px),
+      radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.08) 0.3px, transparent 0.3px),
+      radial-gradient(circle at 40% 80%, rgba(255, 255, 255, 0.06) 0.4px, transparent 0.4px);
+    background-size: 4px 4px, 6px 6px, 8px 8px;
+    opacity: 0.16;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  /* Glass morphism with noise */
+  .glass-noise {
+    background: rgba(221, 221, 221, 0.24);
+    backdrop-filter: blur(6px);
+    border: 1.33px solid transparent;
+    background-image: 
+      linear-gradient(162.62deg, #FFFFFF 12.36%, rgba(255, 255, 255, 0.6) 32.02%, rgba(255, 255, 255, 0) 38.89%, rgba(255, 255, 255, 0) 51.76%, rgba(255, 255, 255, 0.6) 58.23%, rgba(255, 255, 255, 0.8) 77.89%),
+      radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0.5px, transparent 0.5px),
+      radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.08) 0.3px, transparent 0.3px),
+      radial-gradient(circle at 40% 80%, rgba(255, 255, 255, 0.06) 0.4px, transparent 0.4px);
+    background-size: 100% 100%, 4px 4px, 6px 6px, 8px 8px;
+    box-shadow: 2px 4px 8px 0px rgba(0, 0, 0, 0.08);
+  }
 }
 
 @keyframes float {
@@ -231,14 +336,19 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--background);
+  background: #000000;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--border);
+  background: #333333;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--muted-foreground);
+  background: #555555;
+}
+
+
+.fllll {
+  filter: blur(400px);
 }

@@ -17,85 +17,226 @@ export function DyadnumLanding() {
   }
 
   return (
-    <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
-      {/* Navigation */}
-      <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-full max-w-6xl px-4">
-        <div className="glass rounded-2xl px-6 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center text-black font-bold">⧗</div>
-            <span className="text-xl font-bold text-white">Dyadnum</span>
+    <div className="min-h-screen w-full text-foreground overflow-x-hidden bg-black relative">
+      {/* Top Right Background Element */}
+      <div 
+        className="absolute blur-[100px] hidden lg:block"
+        style={{
+          width: '694.1927490234375px',
+          height: '695.98193359375px',
+          top: '-288px',
+          right: '-200px',
+          opacity: 1,
+          background: 'linear-gradient(0deg, #878787 0%, #EEEEEE 100%)',
+          zIndex: 1
+        }}
+      />
+      
+
+      
+      {/* Top Left Background Element */}
+      <div 
+        className="absolute blur-[100px] hidden lg:block"
+        style={{
+          width: '694.1927490234375px',
+          height: '695.98193359375px',
+          top: '-194px',
+          left: '-200px',
+          opacity: 1,
+          background: 'linear-gradient(0deg, #878787 0%, #EEEEEE 100%)',
+          zIndex: 1
+        }}
+      />
+      
+      {/* Shaped Header */}
+      <div className="fixed top-0 left-0 right-0 z-50">
+        <div className="w-full h-[55px] relative">
+          {/* SVG Background */}
+          <div className="absolute inset-0">
+            <img 
+              src="/Vector 41.svg" 
+              alt="Header background" 
+              className="w-full h-full object-cover"
+            />
+          </div>
+          
+          {/* Text Content */}
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="flex items-center gap-3 text-black"
+                 style={{
+                   fontFamily: 'SF Pro',
+                   fontWeight: 510,
+                   fontSize: '17.5px',
+                   lineHeight: '10.63px',
+                   letterSpacing: '0%',
+                   textAlign: 'center'
+                 }}>
+              <div className="w-4 h-4 bg-black rounded-sm flex items-center justify-center">
+                <div className="w-2 h-2 bg-white rounded-sm"></div>
+              </div>
+              <span>8 $DYNM TGE Incoming • Native Token of Dyadnum</span>
+              <div className="w-px h-4 bg-black/20"></div>
+              <span>Learn more →</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Navigation Bar */}
+      <nav className="fixed top-[44px] left-1/2 transform -translate-x-1/2 z-40 w-full max-w-[1920px] h-[118px] px-4">
+        <div className="w-full h-full rounded-[21px] flex items-center justify-between px-8">
+          
+          {/* Logo */}
+          <div className="flex items-center gap-3 h-full">
+            <img 
+              src="/Group 48096456.svg" 
+              alt="Dyadnum Logo" 
+              className="h-12 w-auto object-contain"
+            />
           </div>
 
+          {/* Navigation Links */}
           <div className="hidden md:flex items-center gap-8">
-            <a href="#docs" className="text-gray-400 hover:text-white transition-colors">
+            <a href="#docs" className="text-black hover:text-black/80 transition-colors flex items-center gap-1"
+               style={{ 
+                 fontFamily: 'SF Pro',
+                 fontWeight: 510,
+                 fontSize: '14px',
+                 lineHeight: '8.5px',
+                 letterSpacing: '0%'
+               }}>
               Docs
+              <ExternalLink className="w-3 h-3" />
             </a>
-            <a href="#roadmap" className="text-gray-400 hover:text-white transition-colors">
+            <a href="#roadmap" className="text-black hover:text-black/80 transition-colors"
+               style={{ 
+                 fontFamily: 'SF Pro',
+                 fontWeight: 510,
+                 fontSize: '14px',
+                 lineHeight: '8.5px',
+                 letterSpacing: '0%'
+               }}>
               Roadmap
             </a>
-            <a href="#features" className="text-gray-400 hover:text-white transition-colors">
+            <a href="#features" className="text-black hover:text-black/80 transition-colors"
+               style={{ 
+                 fontFamily: 'SF Pro',
+                 fontWeight: 510,
+                 fontSize: '14px',
+                 lineHeight: '8.5px',
+                 letterSpacing: '0%'
+               }}>
               Features
             </a>
-            <a href="#tokenomics" className="text-gray-400 hover:text-white transition-colors">
+            <a href="#tokenomics" className="text-black hover:text-black/80 transition-colors"
+               style={{ 
+                 fontFamily: 'SF Pro',
+                 fontWeight: 510,
+                 fontSize: '14px',
+                 lineHeight: '8.5px',
+                 letterSpacing: '0%'
+               }}>
               Tokenomics
             </a>
           </div>
 
+          {/* Action Buttons */}
           <div className="flex items-center gap-3">
-            <Button
-              variant="outline"
-              size="sm"
-              className="glass border-gray-600 bg-transparent text-white hover:bg-white/10"
-            >
-              Pitch Deck
-            </Button>
-            <Button size="sm" className="bg-white text-black hover:bg-gray-200">
-              Dashboard
-            </Button>
-          </div>
-        </div>
-      </nav>
-
-      {/* Announcement Banner */}
-      <div className="pt-24 pb-8 text-center">
-        <Badge variant="secondary" className="glass px-4 py-2 text-sm bg-gray-800/50 text-gray-300 border-gray-600">
-          <div className="w-2 h-2 bg-green-400 rounded-full mr-2"></div>
-          $DYNM TGE Incoming • Native Token of Dyadnum
-          <span className="ml-2 text-blue-400">Learn more →</span>
-        </Badge>
-      </div>
-
-      {/* Hero Section with Curved Bottom */}
-      <section className="relative hero-gradient curved-bottom py-20 px-4 text-center">
-        <div className="max-w-6xl mx-auto relative z-10">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 text-balance leading-tight">
-            <span className="text-white">The World's First WhatsApp Native Trade</span>
-            <br />
-            <span className="text-white">Engine Scaling DeFi Where Trust Already Lives</span>
-          </h1>
-
-          <Button
-            size="lg"
-            className="bg-gray-600 text-white hover:bg-gray-500 px-8 py-6 text-lg rounded-xl border border-gray-500"
-          >
-            Get In Touch
-          </Button>
-
-          {/* Phone Mockups */}
-          <div className="relative mt-20 flex justify-center items-center gap-8">
-            <div className="animate-float">
-              <img
-                src="/images/dyadnum-hero.png"
-                alt="WhatsApp Trading Interface"
-                className="w-80 h-auto rounded-3xl shadow-2xl"
+            {/* Telegram Button */}
+            <div className="w-[60px] h-[60px] cursor-pointer hover:scale-110 transition-transform duration-200">
+              <img 
+                src="/Group 48096296.svg" 
+                alt="Telegram Button" 
+                className="w-full h-full"
+              />
+            </div>
+            
+            {/* Pitch Deck Button */}
+            <div className="cursor-pointer hover:scale-110 transition-transform duration-200">
+              <img 
+                src="/Group 48096297.svg" 
+                alt="Pitch Deck Button" 
+                className="h-[60px] w-auto"
+              />
+            </div>
+            
+            {/* Dashboard Button */}
+            <div className="cursor-pointer hover:scale-110 transition-transform duration-200">
+              <img 
+                src="/Group 48096298.svg" 
+                alt="Dashboard Button" 
+                className="h-[60px] w-auto"
               />
             </div>
           </div>
         </div>
+      </nav>
+
+      {/* Hero Section with Curved Bottom */}
+      <section className="relative py-20 px-4 text-center" style={{ paddingTop: '200px', minHeight: '100vh', overflow: 'visible' }}>
+        {/* Background SVG - Group 48096468 */}
+        <div className="absolute inset-0 w-full h-full">
+          <img 
+            src="/Group 48096468.svg" 
+            alt="Hero background" 
+            className="w-full h-full object-cover"
+          />
+        </div>
+        
+        {/* Bottom Background SVG - Group 48096469 */}
+        <div className="absolute left-0 right-0 w-full h-auto" style={{ bottom: '-400px' }}>
+          <img 
+            src="/Group 48096469.svg" 
+            alt="Hero bottom background" 
+            className="w-full h-auto object-cover"
+          />
+        </div>
+        
+        <div className="max-w-6xl mx-auto relative z-10 flex flex-col items-center justify-start pt-12">
+          <h1 className="text-center mb-8"
+              style={{
+                width: '1026px',
+                height: '90px',
+                opacity: 1,
+                fontFamily: 'Nohemi',
+                fontWeight: 600,
+                fontSize: '45.23px',
+                lineHeight: '100%',
+                letterSpacing: '-1%',
+                textTransform: 'capitalize',
+                background: 'linear-gradient(0deg, #F7F9FF 0%, #D0D5E0 100%, #D0D5E0 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+                filter: 'drop-shadow(0px 0.84px 0.84px #FFFFFF) drop-shadow(0px 3.35px 12.56px #000000) drop-shadow(0px 3.35px 3.35px rgba(0,0,0,0.25))'
+              }}>
+            The World's First WhatsApp Native Trade Engine Scaling DeFi Where Trust Already Lives
+          </h1>
+
+          {/* Button */}
+          <div className="mt-4">
+            <img 
+              src="/button.svg" 
+              alt="Get In Touch Button" 
+              className="h-[76px] w-auto cursor-pointer hover:scale-105 transition-transform duration-200"
+            />
+          </div>
+
+          {/* Phone Mockup - Positioned to overlap with bottom background */}
+          <div className="relative z-20 mt-8">
+            <img 
+              src="/Group 48096465.svg" 
+              alt="Phone Mockup" 
+              className="w-[376px] h-[528.3043212890625px] opacity-100"
+            />
+          </div>
+
+        
+        </div>
 
         {/* Partner Ecosystem - moved inside hero for better visual flow */}
-        <div className="relative z-10 pt-20 pb-8">
-          <div className="max-w-6xl mx-auto text-center">
+        <div className="relative z-10 pt-0 pb-8">
+          {/* <div className="max-w-6xl mx-auto text-center">
             <h2 className="text-xl font-medium mb-12 text-gray-400 tracking-wider">OUR PARTNER ECOSYSTEM</h2>
 
             <div className="grid grid-cols-2 md:grid-cols-6 gap-8 items-center opacity-60">
@@ -119,12 +260,12 @@ export function DyadnumLanding() {
                 </div>
               ))}
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
 
       {/* Tools of The Trade */}
-      <section id="features" className="section-dark py-20 px-4">
+      <section id="features" className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4 text-white">Tools Of The Trade</h2>
