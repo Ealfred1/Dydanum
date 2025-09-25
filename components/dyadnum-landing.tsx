@@ -1,11 +1,18 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { Copy, ExternalLink, MessageCircle, Smartphone, Shield, Users, TrendingUp, ArrowRight } from "lucide-react"
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Navigation, Pagination } from 'swiper/modules'
+
+// Import Swiper styles
+import 'swiper/css'
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
 
 export function DyadnumLanding() {
   const [copiedContract, setCopiedContract] = useState(false)
@@ -59,7 +66,7 @@ export function DyadnumLanding() {
               className="w-full h-full object-cover"
             />
           </div>
-          
+
           {/* Text Content */}
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="flex items-center gap-3 text-black"
@@ -91,7 +98,7 @@ export function DyadnumLanding() {
             <img 
               src="/Group 48096456.svg" 
               alt="Dyadnum Logo" 
-              className="h-12 w-auto object-contain"
+              className=" w-auto object-contain mt-[120px]"
             />
           </div>
 
@@ -184,11 +191,12 @@ export function DyadnumLanding() {
         </div>
         
         {/* Bottom Background SVG - Group 48096469 */}
-        <div className="absolute left-0 right-0 w-full h-auto" style={{ bottom: '-400px' }}>
+        <div className="absolute left-0 right-0 w-full h-auto 
+                      bottom-[-400px] ">
           <img 
             src="/Group 48096469.svg" 
             alt="Hero bottom background" 
-            className="w-full h-auto object-cover"
+            className="w-full h-auto object-"
           />
         </div>
         
@@ -219,8 +227,8 @@ export function DyadnumLanding() {
               src="/button.svg" 
               alt="Get In Touch Button" 
               className="h-[76px] w-auto cursor-pointer hover:scale-105 transition-transform duration-200"
-            />
-          </div>
+              />
+            </div>
 
           {/* Phone Mockup - Positioned to overlap with bottom background */}
           <div className="relative z-20 mt-8">
@@ -265,51 +273,448 @@ export function DyadnumLanding() {
       </section>
 
       {/* Tools of The Trade */}
-      <section id="features" className="py-20 px-4">
-        <div className="max-w-6xl mx-auto">
+      <section id="features" className="relative py-20 px-4" style={{ marginTop: '400px' }}>
+        {/* Background SVG - Ref.svg */}
+        <div className="absolute inset-0 w-full h-full">
+          <img 
+            src="/Ref.svg" 
+            alt="Tools section background" 
+            className="w-full h-full object-cover"
+          />
+        </div>
+        
+        <div className="max-w-6xl mx-auto relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4 text-white">Tools Of The Trade</h2>
-            <p className="text-gray-400 text-lg">Navigate the Wild Waters with Titan-like Precision</p>
+            <h2 className="mb-4"
+                style={{
+                  fontFamily: 'Nohemi',
+                  fontWeight: 600,
+                  fontSize: '54px',
+                  lineHeight: '100%',
+                  letterSpacing: '-1%',
+                  textTransform: 'capitalize',
+                  background: 'linear-gradient(0deg, #F7F9FF 0%, #D0D5E0 100%, #D0D5E0 100%)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text',
+                  filter: 'drop-shadow(0px 1px 1px #FFFFFF) drop-shadow(0px 4px 15px #000000) drop-shadow(0px 4px 4px rgba(0,0,0,0.25))'
+                }}>
+              Tools Of The Trade
+            </h2>
+            <p className="text-lg"
+               style={{
+                 fontFamily: 'Lufga',
+                 fontWeight: 400,
+                 fontSize: '14px',
+                 lineHeight: '140%',
+                 letterSpacing: '0%',
+                 textAlign: 'center',
+                 color: '#8E8E93'
+               }}>
+              Navigate the Wild Waters with Titan-like Precision
+            </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {/* Execution Magnet */}
-            <Card className="glass p-8 bg-gray-800/30 border-gray-600">
-              <CardContent className="p-0">
-                <h3 className="text-2xl font-bold mb-6 text-white">Execution Magnet</h3>
-                <div className="space-y-4">
-                  <div className="flex items-center gap-3 p-3 rounded-lg hover:bg-white/5 transition-colors cursor-pointer border border-gray-600">
-                    <TrendingUp className="w-5 h-5 text-green-400" />
-                    <span className="text-white">Market & Limit Orders</span>
-                    <ArrowRight className="w-4 h-4 ml-auto text-gray-400" />
+          <div className="flex gap-8">
+            {/* First Container - Execution Magnet */}
+            <div className="w-[274px] h-[392px] rounded-[21px] border-[1.33px] border-solid p-4 flex flex-col gap-2"
+                 style={{
+                   background: 'linear-gradient(0deg, #878787 0%, #EEEEEE 100%)',
+                  //  borderImage: 'linear-gradient(162.62deg, #FFFFFF 12.36%, rgba(255, 255, 255, 0.6) 32.02%, rgba(255, 255, 255, 0) 38.89%, rgba(255, 255, 255, 0) 51.76%, rgba(255, 255, 255, 0.6) 58.23%, rgba(255, 255, 255, 0.8) 77.89%) 1',
+                   boxShadow: '0px 0.5px 0px rgba(255, 255, 255, 0.16)'
+                 }}>
+              {/* Title */}
+              <h3 className="text-center mb-4"
+                  style={{
+                    fontFamily: 'Nohemi',
+                    fontWeight: 400,
+                    fontSize: '20px',
+                    lineHeight: '100%',
+                    letterSpacing: '0%',
+                    textAlign: 'center',
+                    color: '#000000'
+                  }}>
+                Execution Magnet
+              </h3>
+              
+              {/* Navigation Items */}
+              <div className="space-y-2">
+                {/* Active Selected Item */}
+                <div className="w-[250px] h-[56px] rounded-[21px] border border-solid flex items-center justify-between px-4 cursor-pointer"
+                     style={{
+                       background: '#F7F9FF',
+                       borderColor: '#F7F9FF'
+                     }}>
+                  <div className="flex items-center gap-3">
+                    <TrendingUp className="w-5 h-5 text-black" />
+                    <span className="text-black"
+                          style={{
+                            fontFamily: 'SF Pro',
+                            fontWeight: 400,
+                            fontSize: '14px',
+                            lineHeight: '140%',
+                            letterSpacing: '0%',
+                            color: '#000000'
+                          }}>
+                      Market & Limit Orders
+                    </span>
                   </div>
-                  <div className="flex items-center gap-3 p-3 rounded-lg hover:bg-white/5 transition-colors cursor-pointer">
-                    <Users className="w-5 h-5 text-green-400" />
-                    <span className="text-white">DCA Orders</span>
-                  </div>
-                  <div className="flex items-center gap-3 p-3 rounded-lg hover:bg-white/5 transition-colors cursor-pointer">
-                    <Smartphone className="w-5 h-5 text-green-400" />
-                    <span className="text-white">Dyadnum Crypto Card</span>
-                  </div>
-                  <div className="flex items-center gap-3 p-3 rounded-lg hover:bg-white/5 transition-colors cursor-pointer">
-                    <TrendingUp className="w-5 h-5 text-green-400" />
-                    <span className="text-white">Fiat ↔ Crypto</span>
-                  </div>
+                  <ArrowRight className="w-4 h-4 text-black" />
                 </div>
-              </CardContent>
-            </Card>
+                
+                {/* Other Items */}
+                <div className="flex items-center gap-3 p-4 cursor-pointer">
+                  <Users className="w-5 h-5 text-black" />
+                  <span className="text-black"
+                        style={{
+                          fontFamily: 'SF Pro',
+                          fontWeight: 400,
+                          fontSize: '14px',
+                          lineHeight: '140%',
+                          letterSpacing: '0%',
+                          color: '#000000'
+                        }}>
+                    DCA Orders
+                  </span>
+                </div>
+                
+                <div className="flex items-center gap-3 p-4 cursor-pointer">
+                  <Smartphone className="w-5 h-5 text-black" />
+                  <span className="text-black"
+                        style={{
+                          fontFamily: 'SF Pro',
+                          fontWeight: 400,
+                          fontSize: '14px',
+                          lineHeight: '140%',
+                          letterSpacing: '0%',
+                          color: '#000000'
+                        }}>
+                    Dyadnum Crypto Card
+                  </span>
+                </div>
+                
+                <div className="flex items-center gap-3 p-4 cursor-pointer">
+                  <TrendingUp className="w-5 h-5 text-black" />
+                  <span className="text-black"
+                        style={{
+                          fontFamily: 'SF Pro',
+                          fontWeight: 400,
+                          fontSize: '14px',
+                          lineHeight: '140%',
+                          letterSpacing: '0%',
+                          color: '#000000'
+                        }}>
+                    Fiat ↔ Crypto
+                  </span>
+                  </div>
+                  </div>
+                  </div>
 
-            {/* Precision Meets Simplicity */}
-            <Card className="bg-black border-gray-600 p-8">
-              <CardContent className="p-0">
+            {/* Second Container - Precision Meets Simplicity */}
+            <div className="w-[1150px] h-[392px] rounded-[21px] flex flex-col overflow-hidden"
+                 style={{
+                   background: '#000000'
+                 }}>
+              {/* Upper Section with Group 3.svg */}
+              <div className="relative flex-1 overflow-hidden"
+                   style={{
+                     background: '#000'
+                   }}>
+                {/* Group 3.svg Background */}
+                <div className="absolute inset-0 w-full h-full">
+                  <img 
+                    src="/Group 3.svg" 
+                    alt="Diagonal gradient effect" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                
+                {/* Light Border at Bottom */}
+                <div className="absolute bottom-0 left-0 right-0 h-px bg-white/20"></div>
+              </div>
+              
+              {/* Lower Section with Content */}
+              <div className="flex-1 p-8 flex flex-col justify-center"
+                   style={{
+                     background: '#000000'
+                   }}>
                 <h3 className="text-2xl font-bold mb-6 text-white">Precision Meets Simplicity</h3>
                 <p className="text-gray-300 leading-relaxed">
-                  Automate or act instantly with market orders, or lock in your price ahead of time with limit that
+                  Automate or act instantly with market orders, or lock in your price ahead of time with limits that
                   execute in under 5 milliseconds with auto pre-trade audits. No MetaMask headaches, no Telegram Bot
                   clutter, just seamless, lightning-fast execution.
                 </p>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Additional Features Section */}
+      <section className="relative py-20 px-4">
+        <div className="max-w-7xl mx-auto relative z-10">
+          {/* Section Title */}
+          <div className="text-center mb-16">
+            <h2 className="mb-4"
+                style={{
+                  fontFamily: 'Nohemi',
+                  fontWeight: 600,
+                  fontSize: '54px',
+                  lineHeight: '100%',
+                  letterSpacing: '-1%',
+                  textTransform: 'capitalize',
+                  background: 'linear-gradient(0deg, #F7F9FF 0%, #D0D5E0 100%, #D0D5E0 100%)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text',
+                  filter: 'drop-shadow(0px 1px 1px #FFFFFF) drop-shadow(0px 4px 15px #000000) drop-shadow(0px 4px 4px rgba(0,0,0,0.25))'
+                }}>
+              Additional Features
+            </h2>
+          </div>
+
+          {/* Swiper Carousel */}
+          <div className="relative px-16">
+            <Swiper
+              modules={[Navigation, Pagination]}
+              spaceBetween={20}
+              slidesPerView={1}
+              centeredSlides={false}
+              loop={false}
+              navigation={{
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+              }}
+              pagination={{ clickable: true }}
+              breakpoints={{
+                320: {
+                  slidesPerView: 1,
+                  spaceBetween: 20,
+                },
+                640: {
+                  slidesPerView: 1,
+                  spaceBetween: 20,
+                },
+                768: {
+                  slidesPerView: 2,
+                  spaceBetween: 30,
+                },
+                1024: {
+                  slidesPerView: 3,
+                  spaceBetween: 30,
+                },
+              }}
+              className="mySwiper"
+            >
+              {/* Slide 1 - Adaptive 2FA Security */}
+              <SwiperSlide>
+                <div className="flex flex-col items-center gap-4 mx-auto w-full max-w-[467px] min-h-[400px] px-4"
+                     style={{
+                       gap: '18px'
+                     }}>
+                  {/* Image Container */}
+                  <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96"
+                       style={{
+                         borderRadius: '855.67px',
+                         border: '2.57px solid transparent',
+                         background: 'linear-gradient(white, white) padding-box, linear-gradient(45deg, #F7F9FF, #D0D5E0) border-box'
+                       }}>
+                    <div className="w-full h-full rounded-full bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
+                      <div className="w-16 h-16 sm:w-24 sm:h-24 lg:w-32 lg:h-32 bg-black rounded-full flex items-center justify-center">
+                        <div className="w-8 h-8 sm:w-12 sm:h-12 lg:w-16 lg:h-16 bg-white rounded-full flex items-center justify-center">
+                          <div className="w-4 h-4 sm:w-6 sm:h-6 lg:w-8 lg:h-8 bg-black rounded-full"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Content */}
+                  <div className="text-center">
+                    <h3 className="mb-4 text-2xl sm:text-3xl lg:text-4xl"
+                        style={{
+                          fontFamily: 'Nohemi',
+                          fontWeight: 400,
+                          lineHeight: '120%',
+                          letterSpacing: '0%',
+                          textAlign: 'center',
+                          background: 'linear-gradient(0deg, #F7F9FF 0%, #D0D5E0 100%, #D0D5E0 100%)',
+                          WebkitBackgroundClip: 'text',
+                          WebkitTextFillColor: 'transparent',
+                          backgroundClip: 'text',
+                          filter: 'drop-shadow(0px 1px 1px #FFFFFF)'
+                        }}>
+                      Adaptive 2FA Security
+                    </h3>
+                    <p className="text-white text-sm sm:text-base lg:text-lg"
+                       style={{
+                         fontFamily: 'SF Pro',
+                         fontWeight: 400,
+                         lineHeight: '28px',
+                         letterSpacing: '0%',
+                         textAlign: 'center'
+                       }}>
+                      From critical actions to irreversible withdrawals, security scales with the moment. Fast when you need it, uncompromising when it matters.
+                    </p>
+                  </div>
+                </div>
+              </SwiperSlide>
+
+              {/* Slide 2 - Mass Adoption Optimized User Experience */}
+              <SwiperSlide>
+                <div className="flex flex-col items-center gap-4 mx-auto"
+                     style={{
+                       width: '467px',
+                       height: '757px',
+                       gap: '18px'
+                     }}>
+                  {/* Image Container */}
+                  <div className="relative"
+                       style={{
+                         width: '400px',
+                         height: '400px',
+                         borderRadius: '855.67px',
+                         border: '2.57px solid transparent',
+                         background: 'linear-gradient(white, white) padding-box, linear-gradient(45deg, #F7F9FF, #D0D5E0) border-box'
+                       }}>
+                    <div className="w-full h-full rounded-full bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
+                      <div className="w-32 h-32 bg-black rounded-full flex items-center justify-center">
+                        <div className="text-white text-sm font-bold">Loading...</div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Content */}
+                  <div className="text-center">
+                    <h3 className="mb-4"
+                        style={{
+                          fontFamily: 'Nohemi',
+                          fontWeight: 400,
+                          fontSize: '32px',
+                          lineHeight: '120%',
+                          letterSpacing: '0%',
+                          textAlign: 'center',
+                          background: 'linear-gradient(0deg, #F7F9FF 0%, #D0D5E0 100%, #D0D5E0 100%)',
+                          WebkitBackgroundClip: 'text',
+                          WebkitTextFillColor: 'transparent',
+                          backgroundClip: 'text',
+                          filter: 'drop-shadow(0px 1px 1px #FFFFFF)'
+                        }}>
+                      Mass Adoption Optimized User Experience
+                    </h3>
+                    <p className="text-white"
+                       style={{
+                         fontFamily: 'SF Pro',
+                         fontWeight: 400,
+                         fontSize: '18px',
+                         lineHeight: '28px',
+                         letterSpacing: '0%',
+                         textAlign: 'center'
+                       }}>
+                      Analyzes every interaction to adapt instantly guiding beginners, empowering intermediates, and serving veterans in one seamless experience that builds confidence, not friction Without compromise.
+                    </p>
+                  </div>
+                </div>
+              </SwiperSlide>
+
+              {/* Slide 3 - Multi-Chain Wallet Tracker */}
+              <SwiperSlide>
+                <div className="flex flex-col items-center gap-4 mx-auto"
+                     style={{
+                       width: '467px',
+                       height: '757px',
+                       gap: '18px'
+                     }}>
+                  {/* Image Container */}
+                  <div className="relative"
+                       style={{
+                         width: '400px',
+                         height: '400px',
+                         borderRadius: '855.67px',
+                         border: '2.57px solid transparent',
+                         background: 'linear-gradient(white, white) padding-box, linear-gradient(45deg, #F7F9FF, #D0D5E0) border-box'
+                       }}>
+                    <div className="w-full h-full rounded-full bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center p-4">
+                      <div className="w-full h-full bg-black rounded-full p-4 flex flex-col gap-2">
+                        <div className="bg-gray-800 rounded-lg p-2 text-white text-xs">
+                          <div className="flex items-center gap-1 mb-1">
+                            <div className="w-2 h-2 bg-white rounded-full"></div>
+                            <span>Dyadnum 1m ago</span>
+                          </div>
+                          <div>James transferred ($14,846.73)</div>
+                        </div>
+                        <div className="bg-gray-800 rounded-lg p-2 text-white text-xs">
+                          <div className="flex items-center gap-1 mb-1">
+                            <div className="w-2 h-2 bg-white rounded-full"></div>
+                            <span>Dyadnum 1m ago</span>
+                          </div>
+                          <div>0xA9f2...cB77 transferred ($1,385.67)</div>
+                        </div>
+                        <div className="bg-gray-800 rounded-lg p-2 text-white text-xs">
+                          <div className="flex items-center gap-1 mb-1">
+                            <div className="w-2 h-2 bg-white rounded-full"></div>
+                            <span>Dyadnum 4m ago</span>
+                          </div>
+                          <div>0xFe3...A12 bought $DYM ($80,391)</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Content */}
+                  <div className="text-center">
+                    <h3 className="mb-4"
+                        style={{
+                          fontFamily: 'Nohemi',
+                          fontWeight: 400,
+                          fontSize: '32px',
+                          lineHeight: '120%',
+                          letterSpacing: '0%',
+                          textAlign: 'center',
+                          background: 'linear-gradient(0deg, #F7F9FF 0%, #D0D5E0 100%, #D0D5E0 100%)',
+                          WebkitBackgroundClip: 'text',
+                          WebkitTextFillColor: 'transparent',
+                          backgroundClip: 'text',
+                          filter: 'drop-shadow(0px 1px 1px #FFFFFF)'
+                        }}>
+                      Multi-Chain Wallet Tracker
+                    </h3>
+                    <p className="text-white"
+                       style={{
+                         fontFamily: 'SF Pro',
+                         fontWeight: 400,
+                         fontSize: '18px',
+                         lineHeight: '28px',
+                         letterSpacing: '0%',
+                         textAlign: 'center'
+                       }}>
+                      Wallet Tracker: Tracks Movements Across Supported Chains, Delivers Fully Customizable Priority Alerts, and Reveals Emerging Patterns Before They're Obvious.
+                    </p>
+                  </div>
+                </div>
+              </SwiperSlide>
+            </Swiper>
+
+            {/* Navigation Buttons */}
+            <div className="swiper-button-prev"
+                 style={{
+                   width: '58px',
+                   height: '58px',
+                   background: 'linear-gradient(0deg, #878787 0%, #EEEEEE 100%)',
+                   borderRadius: '50%',
+                   color: '#000',
+                   left: '-80px'
+                 }}>
+            </div>
+            <div className="swiper-button-next"
+                 style={{
+                   width: '58px',
+                   height: '58px',
+                   background: 'linear-gradient(0deg, #878787 0%, #EEEEEE 100%)',
+                   borderRadius: '50%',
+                   color: '#000',
+                   right: '-80px'
+                 }}>
+            </div>
           </div>
         </div>
       </section>
