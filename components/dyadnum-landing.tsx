@@ -156,7 +156,7 @@ export function DyadnumLanding() {
                 alt="Telegram Button" 
                 className="w-full h-full"
               />
-            </div>
+          </div>
             
             {/* Pitch Deck Button */}
             <div className="cursor-pointer hover:scale-110 transition-transform duration-200">
@@ -165,7 +165,7 @@ export function DyadnumLanding() {
                 alt="Pitch Deck Button" 
                 className="h-[60px] w-auto"
               />
-            </div>
+        </div>
             
             {/* Dashboard Button */}
             <div className="cursor-pointer hover:scale-110 transition-transform duration-200">
@@ -174,7 +174,7 @@ export function DyadnumLanding() {
                 alt="Dashboard Button" 
                 className="h-[60px] w-auto"
               />
-            </div>
+      </div>
           </div>
         </div>
       </nav>
@@ -236,8 +236,8 @@ export function DyadnumLanding() {
               src="/Group 48096465.svg" 
               alt="Phone Mockup" 
               className="w-[376px] h-[528.3043212890625px] opacity-100"
-            />
-          </div>
+              />
+            </div>
 
         
         </div>
@@ -360,7 +360,7 @@ export function DyadnumLanding() {
                     </span>
                   </div>
                   <ArrowRight className="w-4 h-4 text-black" />
-                </div>
+                  </div>
                 
                 {/* Other Items */}
                 <div className="flex items-center gap-3 p-4 cursor-pointer">
@@ -376,7 +376,7 @@ export function DyadnumLanding() {
                         }}>
                     DCA Orders
                   </span>
-                </div>
+                  </div>
                 
                 <div className="flex items-center gap-3 p-4 cursor-pointer">
                   <Smartphone className="w-5 h-5 text-black" />
@@ -391,7 +391,7 @@ export function DyadnumLanding() {
                         }}>
                     Dyadnum Crypto Card
                   </span>
-                </div>
+                  </div>
                 
                 <div className="flex items-center gap-3 p-4 cursor-pointer">
                   <TrendingUp className="w-5 h-5 text-black" />
@@ -406,7 +406,7 @@ export function DyadnumLanding() {
                         }}>
                     Fiat ↔ Crypto
                   </span>
-                  </div>
+                </div>
                   </div>
                   </div>
 
@@ -452,7 +452,7 @@ export function DyadnumLanding() {
 
       {/* Additional Features Section */}
       <section className="relative py-20 px-4">
-        <div className="max-w-7xl mx-auto relative z-10">
+        <div className="max-w-8xl mx-auto relative z-10">
           {/* Section Title */}
           <div className="text-center mb-16">
             <h2 className="mb-4"
@@ -474,69 +474,73 @@ export function DyadnumLanding() {
           </div>
 
           {/* Swiper Carousel */}
-          <div className="relative px-16">
+          <div className="relative px-4">
             <Swiper
-              modules={[Navigation, Pagination]}
+              modules={[Pagination]}
               spaceBetween={20}
-              slidesPerView={1}
+              slidesPerView={3}
               centeredSlides={false}
               loop={false}
-              navigation={{
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-              }}
               pagination={{ clickable: true }}
               breakpoints={{
                 320: {
                   slidesPerView: 1,
+                  spaceBetween: 16,
+                },
+                480: {
+                  slidesPerView: 1,
                   spaceBetween: 20,
                 },
                 640: {
-                  slidesPerView: 1,
+                  slidesPerView: 2,
                   spaceBetween: 20,
                 },
                 768: {
                   slidesPerView: 2,
-                  spaceBetween: 30,
+                  spaceBetween: 24,
                 },
                 1024: {
                   slidesPerView: 3,
                   spaceBetween: 30,
+                },
+                1280: {
+                  slidesPerView: 3,
+                  spaceBetween: 40,
                 },
               }}
               className="mySwiper"
             >
               {/* Slide 1 - Adaptive 2FA Security */}
               <SwiperSlide>
-                <div className="flex flex-col items-center gap-4 mx-auto w-full max-w-[467px] min-h-[400px] px-4"
+                <div className="flex flex-col items-center gap-4 mx-auto w-full max-w-[467px] min-h-[400px] px-2 sm:px-4"
                      style={{
                        gap: '18px'
                      }}>
                   {/* Image Container */}
-                  <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96"
+                  <div className="relative w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96"
                        style={{
                          borderRadius: '855.67px',
                          border: '2.57px solid transparent',
                          background: 'linear-gradient(white, white) padding-box, linear-gradient(45deg, #F7F9FF, #D0D5E0) border-box'
                        }}>
-                    <div className="w-full h-full rounded-full bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
-                      <div className="w-16 h-16 sm:w-24 sm:h-24 lg:w-32 lg:h-32 bg-black rounded-full flex items-center justify-center">
-                        <div className="w-8 h-8 sm:w-12 sm:h-12 lg:w-16 lg:h-16 bg-white rounded-full flex items-center justify-center">
-                          <div className="w-4 h-4 sm:w-6 sm:h-6 lg:w-8 lg:h-8 bg-black rounded-full"></div>
-                        </div>
-                      </div>
-                    </div>
+                    <img 
+                      src="/↪️Cryptic_ Post.svg" 
+                      alt="Adaptive 2FA Security" 
+                      className="w-full h-full object-cover rounded-full"
+                    />
                   </div>
                   
                   {/* Content */}
                   <div className="text-center">
-                    <h3 className="mb-4 text-2xl sm:text-3xl lg:text-4xl"
+                    <h3 className="mb-4 text-xl sm:text-2xl md:text-3xl lg:text-4xl"
                         style={{
                           fontFamily: 'Nohemi',
                           fontWeight: 400,
+                          fontSize: 'clamp(20px, 4vw, 32px)',
                           lineHeight: '120%',
                           letterSpacing: '0%',
                           textAlign: 'center',
+                          verticalAlign: 'middle',
                           background: 'linear-gradient(0deg, #F7F9FF 0%, #D0D5E0 100%, #D0D5E0 100%)',
                           WebkitBackgroundClip: 'text',
                           WebkitTextFillColor: 'transparent',
@@ -545,7 +549,7 @@ export function DyadnumLanding() {
                         }}>
                       Adaptive 2FA Security
                     </h3>
-                    <p className="text-white text-sm sm:text-base lg:text-lg"
+                    <p className="text-white text-xs sm:text-sm md:text-base lg:text-lg"
                        style={{
                          fontFamily: 'SF Pro',
                          fontWeight: 400,
@@ -561,38 +565,35 @@ export function DyadnumLanding() {
 
               {/* Slide 2 - Mass Adoption Optimized User Experience */}
               <SwiperSlide>
-                <div className="flex flex-col items-center gap-4 mx-auto"
+                <div className="flex flex-col items-center gap-4 mx-auto w-full max-w-[467px] min-h-[400px] px-2 sm:px-4"
                      style={{
-                       width: '467px',
-                       height: '757px',
                        gap: '18px'
                      }}>
                   {/* Image Container */}
-                  <div className="relative"
+                  <div className="relative w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96"
                        style={{
-                         width: '400px',
-                         height: '400px',
                          borderRadius: '855.67px',
                          border: '2.57px solid transparent',
                          background: 'linear-gradient(white, white) padding-box, linear-gradient(45deg, #F7F9FF, #D0D5E0) border-box'
                        }}>
-                    <div className="w-full h-full rounded-full bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
-                      <div className="w-32 h-32 bg-black rounded-full flex items-center justify-center">
-                        <div className="text-white text-sm font-bold">Loading...</div>
-                      </div>
-                    </div>
+                    <img 
+                      src="/Glass Effect.svg" 
+                      alt="Mass Adoption Optimized User Experience" 
+                      className="w-full h-full object-cover rounded-full"
+                    />
                   </div>
                   
                   {/* Content */}
                   <div className="text-center">
-                    <h3 className="mb-4"
+                    <h3 className="mb-4 text-xl sm:text-2xl md:text-3xl lg:text-4xl"
                         style={{
                           fontFamily: 'Nohemi',
                           fontWeight: 400,
-                          fontSize: '32px',
+                          fontSize: 'clamp(20px, 4vw, 32px)',
                           lineHeight: '120%',
                           letterSpacing: '0%',
                           textAlign: 'center',
+                          verticalAlign: 'middle',
                           background: 'linear-gradient(0deg, #F7F9FF 0%, #D0D5E0 100%, #D0D5E0 100%)',
                           WebkitBackgroundClip: 'text',
                           WebkitTextFillColor: 'transparent',
@@ -601,11 +602,10 @@ export function DyadnumLanding() {
                         }}>
                       Mass Adoption Optimized User Experience
                     </h3>
-                    <p className="text-white"
+                    <p className="text-white text-xs sm:text-sm md:text-base lg:text-lg"
                        style={{
                          fontFamily: 'SF Pro',
                          fontWeight: 400,
-                         fontSize: '18px',
                          lineHeight: '28px',
                          letterSpacing: '0%',
                          textAlign: 'center'
@@ -618,58 +618,35 @@ export function DyadnumLanding() {
 
               {/* Slide 3 - Multi-Chain Wallet Tracker */}
               <SwiperSlide>
-                <div className="flex flex-col items-center gap-4 mx-auto"
+                <div className="flex flex-col items-center gap-4 mx-auto w-full max-w-[467px] min-h-[400px] px-2 sm:px-4"
                      style={{
-                       width: '467px',
-                       height: '757px',
                        gap: '18px'
                      }}>
                   {/* Image Container */}
-                  <div className="relative"
+                  <div className="relative w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96"
                        style={{
-                         width: '400px',
-                         height: '400px',
                          borderRadius: '855.67px',
                          border: '2.57px solid transparent',
                          background: 'linear-gradient(white, white) padding-box, linear-gradient(45deg, #F7F9FF, #D0D5E0) border-box'
                        }}>
-                    <div className="w-full h-full rounded-full bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center p-4">
-                      <div className="w-full h-full bg-black rounded-full p-4 flex flex-col gap-2">
-                        <div className="bg-gray-800 rounded-lg p-2 text-white text-xs">
-                          <div className="flex items-center gap-1 mb-1">
-                            <div className="w-2 h-2 bg-white rounded-full"></div>
-                            <span>Dyadnum 1m ago</span>
-                          </div>
-                          <div>James transferred ($14,846.73)</div>
-                        </div>
-                        <div className="bg-gray-800 rounded-lg p-2 text-white text-xs">
-                          <div className="flex items-center gap-1 mb-1">
-                            <div className="w-2 h-2 bg-white rounded-full"></div>
-                            <span>Dyadnum 1m ago</span>
-                          </div>
-                          <div>0xA9f2...cB77 transferred ($1,385.67)</div>
-                        </div>
-                        <div className="bg-gray-800 rounded-lg p-2 text-white text-xs">
-                          <div className="flex items-center gap-1 mb-1">
-                            <div className="w-2 h-2 bg-white rounded-full"></div>
-                            <span>Dyadnum 4m ago</span>
-                          </div>
-                          <div>0xFe3...A12 bought $DYM ($80,391)</div>
-                        </div>
-                      </div>
-                    </div>
+                    <img 
+                      src="/Group 48096286.svg" 
+                      alt="Multi-Chain Wallet Tracker" 
+                      className="w-full h-full object-cover rounded-full"
+                    />
                   </div>
                   
                   {/* Content */}
                   <div className="text-center">
-                    <h3 className="mb-4"
+                    <h3 className="mb-4 text-xl sm:text-2xl md:text-3xl lg:text-4xl"
                         style={{
                           fontFamily: 'Nohemi',
                           fontWeight: 400,
-                          fontSize: '32px',
+                          fontSize: 'clamp(20px, 4vw, 32px)',
                           lineHeight: '120%',
                           letterSpacing: '0%',
                           textAlign: 'center',
+                          verticalAlign: 'middle',
                           background: 'linear-gradient(0deg, #F7F9FF 0%, #D0D5E0 100%, #D0D5E0 100%)',
                           WebkitBackgroundClip: 'text',
                           WebkitTextFillColor: 'transparent',
@@ -678,11 +655,10 @@ export function DyadnumLanding() {
                         }}>
                       Multi-Chain Wallet Tracker
                     </h3>
-                    <p className="text-white"
+                    <p className="text-white text-xs sm:text-sm md:text-base lg:text-lg"
                        style={{
                          fontFamily: 'SF Pro',
                          fontWeight: 400,
-                         fontSize: '18px',
                          lineHeight: '28px',
                          letterSpacing: '0%',
                          textAlign: 'center'
@@ -693,34 +669,12 @@ export function DyadnumLanding() {
                 </div>
               </SwiperSlide>
             </Swiper>
-
-            {/* Navigation Buttons */}
-            <div className="swiper-button-prev"
-                 style={{
-                   width: '58px',
-                   height: '58px',
-                   background: 'linear-gradient(0deg, #878787 0%, #EEEEEE 100%)',
-                   borderRadius: '50%',
-                   color: '#000',
-                   left: '-80px'
-                 }}>
-            </div>
-            <div className="swiper-button-next"
-                 style={{
-                   width: '58px',
-                   height: '58px',
-                   background: 'linear-gradient(0deg, #878787 0%, #EEEEEE 100%)',
-                   borderRadius: '50%',
-                   color: '#000',
-                   right: '-80px'
-                 }}>
-            </div>
           </div>
         </div>
       </section>
 
       {/* Additional Benefits */}
-      <section className="section-darker py-20 px-4">
+      {/* <section className="section-darker py-20 px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold text-center mb-16 text-white">Additional Benefits Across The Ecosystem</h2>
 
@@ -765,38 +719,142 @@ export function DyadnumLanding() {
             </Card>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Effortless Onboarding */}
-      <section className="section-dark py-20 px-4">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-16 text-white">Effortless Onboarding Via WhatsApp</h2>
+      <section className="relative py-20 px-4">
+        {/* Background SVG - Ref.svg */}
+        <div className="absolute inset-0 w-full h-full">
+          <img 
+            src="/Ref.svg" 
+            alt="Effortless Onboarding background" 
+            className="w-full h-full object-cover"
+          />
+        </div>
+        
+        <div className="max-w-8xl mx-auto relative z-10">
+          <h2 className="text-center mb-16"
+              style={{
+                fontFamily: 'Nohemi',
+                fontWeight: 600,
+                fontSize: '54px',
+                lineHeight: '100%',
+                letterSpacing: '-1%',
+                textTransform: 'capitalize',
+                background: 'linear-gradient(0deg, #F7F9FF 0%, #D0D5E0 100%, #D0D5E0 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+                filter: 'drop-shadow(0px 1px 1px #FFFFFF) drop-shadow(0px 4px 15px #000000) drop-shadow(0px 4px 4px rgba(0,0,0,0.25))'
+              }}>
+            Effortless Onboarding Via WhatsApp
+          </h2>
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
               <div>
-                <h3 className="text-2xl font-bold mb-4 text-white">Zero Drag Setup</h3>
-                <p className="text-gray-300">
+                <h3 className="mb-4"
+                    style={{
+                      fontFamily: 'Nohemi',
+                      fontWeight: 400,
+                      fontSize: '32px',
+                      lineHeight: '120%',
+                      letterSpacing: '0%',
+                      textAlign: 'left',
+                      verticalAlign: 'middle',
+                      background: 'linear-gradient(0deg, #F7F9FF 0%, #D0D5E0 100%, #D0D5E0 100%)',
+                      WebkitBackgroundClip: 'text',
+                      WebkitTextFillColor: 'transparent',
+                      backgroundClip: 'text',
+                      filter: 'drop-shadow(0px 1px 1px #FFFFFF)'
+                    }}>
+                  Zero Drag Setup
+                </h3>
+                <p className="text-gray-300"
+                   style={{
+                     fontFamily: 'SF Pro',
+                     fontWeight: 400,
+                     fontSize: '18px',
+                     lineHeight: '28px',
+                     letterSpacing: '0%',
+                     textAlign: 'left'
+                   }}>
                   Create & Fund Your Wallet In Seconds, Guided By An Adaptive User Experience
                 </p>
               </div>
 
               <div>
-                <h3 className="text-2xl font-bold mb-4 text-white">Execute & Earn</h3>
-                <p className="text-gray-300">Trade On Autopilot, While Staying In Full Control, With Our Curated</p>
+                <h3 className="mb-4"
+                    style={{
+                      fontFamily: 'Nohemi',
+                      fontWeight: 400,
+                      fontSize: '32px',
+                      lineHeight: '120%',
+                      letterSpacing: '0%',
+                      textAlign: 'left',
+                      verticalAlign: 'middle',
+                      background: 'linear-gradient(0deg, #F7F9FF 0%, #D0D5E0 100%, #D0D5E0 100%)',
+                      WebkitBackgroundClip: 'text',
+                      WebkitTextFillColor: 'transparent',
+                      backgroundClip: 'text',
+                      filter: 'drop-shadow(0px 1px 1px #FFFFFF)'
+                    }}>
+                  Execute & Earn
+                </h3>
+                <p className="text-gray-300"
+                   style={{
+                     fontFamily: 'SF Pro',
+                     fontWeight: 400,
+                     fontSize: '18px',
+                     lineHeight: '28px',
+                     letterSpacing: '0%',
+                     textAlign: 'left'
+                   }}>
+                  Trade Manually Or On Autopilot, While Passive Income From Curated Backed By Institutional-Grade
+                </p>
               </div>
 
               <div>
-                <h3 className="text-2xl font-bold mb-4 text-white">Turn Profits Into Fiat</h3>
-                <p className="text-gray-300">Seamlessly convert your crypto gains to traditional currency</p>
+                <h3 className="mb-4"
+                    style={{
+                      fontFamily: 'Nohemi',
+                      fontWeight: 400,
+                      fontSize: '32px',
+                      lineHeight: '120%',
+                      letterSpacing: '0%',
+                      textAlign: 'left',
+                      verticalAlign: 'middle',
+                      background: 'linear-gradient(0deg, #F7F9FF 0%, #D0D5E0 100%, #D0D5E0 100%)',
+                      WebkitBackgroundClip: 'text',
+                      WebkitTextFillColor: 'transparent',
+                      backgroundClip: 'text',
+                      filter: 'drop-shadow(0px 1px 1px #FFFFFF)'
+                    }}>
+                  Turn Profits Into Fiat
+                </h3>
+                <p className="text-gray-300"
+                   style={{
+                     fontFamily: 'SF Pro',
+                     fontWeight: 400,
+                     fontSize: '18px',
+                     lineHeight: '28px',
+                     letterSpacing: '0%',
+                     textAlign: 'left'
+                   }}>
+                  Seamlessly convert your crypto gains to traditional currency
+                </p>
               </div>
             </div>
 
-            <div className="animate-float">
+            <div className="flex justify-center">
               <img
-                src="/images/dyadnum-onboarding.png"
-                alt="WhatsApp Onboarding Interface"
-                className="w-full max-w-md mx-auto rounded-3xl shadow-2xl"
+                src="/Group 48096465.svg"
+                alt="Phone Mockup"
+                style={{
+                  width: '554.9839477539062px',
+                  height: '779.7871704101562px',
+                  opacity: 1
+                }}
               />
             </div>
           </div>
@@ -804,9 +862,33 @@ export function DyadnumLanding() {
       </section>
 
       {/* Tokenomics */}
-      <section id="tokenomics" className="section-darker py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-8 text-white">$DYNM Tokenomics</h2>
+      <section id="tokenomics" className="relative py-20 px-4 mb-20">
+        {/* Background SVG - Ref.svg */}
+        <div className="absolute inset-0 w-full h-full">
+          <img 
+            src="/Ref.svg" 
+            alt="Tokenomics background" 
+            className="w-full h-full object-cover"
+          />
+        </div>
+        
+        <div className="max-w-4xl mx-auto text-center relative z-10">
+          <h2 className="mb-8"
+              style={{
+                fontFamily: 'Nohemi',
+                fontWeight: 600,
+                fontSize: '54px',
+                lineHeight: '100%',
+                letterSpacing: '-1%',
+                textTransform: 'capitalize',
+                background: 'linear-gradient(0deg, #F7F9FF 0%, #D0D5E0 100%, #D0D5E0 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+                filter: 'drop-shadow(0px 1px 1px #FFFFFF) drop-shadow(0px 4px 15px #000000) drop-shadow(0px 4px 4px rgba(0,0,0,0.25))'
+              }}>
+            $DYNM Tokenomics
+          </h2>
 
           <div className="flex items-center justify-center gap-4 mb-12">
             <span className="text-gray-400">Contract:</span>
@@ -822,35 +904,149 @@ export function DyadnumLanding() {
           </div>
 
           {/* Tokenomics Chart */}
-          <div className="relative w-96 h-96 mx-auto mb-12">
+          <div className="relative mx-auto mb-12 flex justify-center">
             <img
-              src="/images/tokenomics-chart.png"
+              src="/Group 48096467.svg"
               alt="Tokenomics Distribution Chart"
-              className="w-full h-full object-contain"
+              className="object-contain"
+              style={{
+                width: '700px',
+                height: '700px',
+              }}
             />
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
-            <Card className="glass p-6 bg-gray-800/50 border-gray-600">
-              <CardContent className="p-0 text-center">
-                <h3 className="text-lg font-bold mb-2 text-white">Buy & Sell Tax</h3>
-                <p className="text-sm text-gray-300">5% for Marketing, Development & Scaling</p>
-              </CardContent>
-            </Card>
+          {/* Infinite Horizontal Scrolling Cards */}
+          <div className="relative overflow-hidden">
+            <div className="flex animate-scroll gap-2" style={{ animation: 'scroll 20s linear infinite' }}>
+              {/* First set of cards */}
+              <div className="flex-shrink-0" style={{
+                width: '573.4000244140625px',
+                height: '196.4600067138672px',
+                borderRadius: '21px',
+                borderWidth: '1.33px',
+                paddingTop: '16px',
+                paddingRight: '32px',
+                paddingBottom: '16px',
+                paddingLeft: '32px',
+                background: '#DDDDDD3D',
+                border: '1.33px solid',
+                borderImageSource: 'linear-gradient(162.62deg, #FFFFFF 12.36%, rgba(255, 255, 255, 0.6) 32.02%, rgba(255, 255, 255, 0) 38.89%, rgba(255, 255, 255, 0) 51.76%, rgba(255, 255, 255, 0.6) 58.23%, rgba(255, 255, 255, 0.8) 77.89%)',
+                backdropFilter: 'blur(6px)',
+                boxShadow: '2px 4px 8px 0px #00000014'
+              }}>
+                <div className="text-center">
+                  <h3 className="text-lg font-bold mb-2 text-white">Buy & Sell Tax</h3>
+                  <p className="text-sm text-gray-300">5% for Marketing, Development & Scaling</p>
+                </div>
+              </div>
 
-            <Card className="glass p-6 bg-gray-800/50 border-gray-600">
-              <CardContent className="p-0 text-center">
-                <h3 className="text-lg font-bold mb-2 text-white">Total Supply</h3>
-                <p className="text-sm text-gray-300">Fixed Supply</p>
-              </CardContent>
-            </Card>
+              <div className="flex-shrink-0" style={{
+                width: '573.4000244140625px',
+                height: '196.4600067138672px',
+                borderRadius: '21px',
+                borderWidth: '1.33px',
+                paddingTop: '16px',
+                paddingRight: '32px',
+                paddingBottom: '16px',
+                paddingLeft: '32px',
+                background: '#DDDDDD3D',
+                border: '1.33px solid',
+                borderImageSource: 'linear-gradient(162.62deg, #FFFFFF 12.36%, rgba(255, 255, 255, 0.6) 32.02%, rgba(255, 255, 255, 0) 38.89%, rgba(255, 255, 255, 0) 51.76%, rgba(255, 255, 255, 0.6) 58.23%, rgba(255, 255, 255, 0.8) 77.89%)',
+                backdropFilter: 'blur(6px)',
+                boxShadow: '2px 4px 8px 0px #00000014'
+              }}>
+                <div className="text-center">
+                  <h3 className="text-lg font-bold mb-2 text-white">Total Supply</h3>
+                  <p className="text-sm text-gray-300">100,000,000</p>
+                </div>
+              </div>
 
-            <Card className="glass p-6 bg-gray-800/50 border-gray-600">
-              <CardContent className="p-0 text-center">
-                <h3 className="text-lg font-bold mb-2 text-white">Liquidity Pool</h3>
-                <p className="text-sm text-gray-300">Locked & Renounced via UNCX Network</p>
-              </CardContent>
-            </Card>
+              <div className="flex-shrink-0" style={{
+                width: '573.4000244140625px',
+                height: '196.4600067138672px',
+                borderRadius: '21px',
+                borderWidth: '1.33px',
+                paddingTop: '16px',
+                paddingRight: '32px',
+                paddingBottom: '16px',
+                paddingLeft: '32px',
+                background: '#DDDDDD3D',
+                border: '1.33px solid',
+                borderImageSource: 'linear-gradient(162.62deg, #FFFFFF 12.36%, rgba(255, 255, 255, 0.6) 32.02%, rgba(255, 255, 255, 0) 38.89%, rgba(255, 255, 255, 0) 51.76%, rgba(255, 255, 255, 0.6) 58.23%, rgba(255, 255, 255, 0.8) 77.89%)',
+                backdropFilter: 'blur(6px)',
+                boxShadow: '2px 4px 8px 0px #00000014'
+              }}>
+                <div className="text-center">
+                  <h3 className="text-lg font-bold mb-2 text-white">Liquidity Pool</h3>
+                  <p className="text-sm text-gray-300">Locked & Renounced via UNCX Network</p>
+                </div>
+              </div>
+
+              {/* Duplicate set for seamless loop */}
+              <div className="flex-shrink-0" style={{
+                width: '573.4000244140625px',
+                height: '196.4600067138672px',
+                borderRadius: '21px',
+                borderWidth: '1.33px',
+                paddingTop: '16px',
+                paddingRight: '32px',
+                paddingBottom: '16px',
+                paddingLeft: '32px',
+                background: '#DDDDDD3D',
+                border: '1.33px solid',
+                borderImageSource: 'linear-gradient(162.62deg, #FFFFFF 12.36%, rgba(255, 255, 255, 0.6) 32.02%, rgba(255, 255, 255, 0) 38.89%, rgba(255, 255, 255, 0) 51.76%, rgba(255, 255, 255, 0.6) 58.23%, rgba(255, 255, 255, 0.8) 77.89%)',
+                backdropFilter: 'blur(6px)',
+                boxShadow: '2px 4px 8px 0px #00000014'
+              }}>
+                <div className="text-center">
+                  <h3 className="text-lg font-bold mb-2 text-white">Buy & Sell Tax</h3>
+                  <p className="text-sm text-gray-300">5% for Marketing, Development & Scaling</p>
+                </div>
+              </div>
+
+              <div className="flex-shrink-0" style={{
+                width: '573.4000244140625px',
+                height: '196.4600067138672px',
+                borderRadius: '21px',
+                borderWidth: '1.33px',
+                paddingTop: '16px',
+                paddingRight: '32px',
+                paddingBottom: '16px',
+                paddingLeft: '32px',
+                background: '#DDDDDD3D',
+                border: '1.33px solid',
+                borderImageSource: 'linear-gradient(162.62deg, #FFFFFF 12.36%, rgba(255, 255, 255, 0.6) 32.02%, rgba(255, 255, 255, 0) 38.89%, rgba(255, 255, 255, 0) 51.76%, rgba(255, 255, 255, 0.6) 58.23%, rgba(255, 255, 255, 0.8) 77.89%)',
+                backdropFilter: 'blur(6px)',
+                boxShadow: '2px 4px 8px 0px #00000014'
+              }}>
+                <div className="text-center">
+                  <h3 className="text-lg font-bold mb-2 text-white">Total Supply</h3>
+                  <p className="text-sm text-gray-300">100,000,000</p>
+                </div>
+              </div>
+
+              <div className="flex-shrink-0" style={{
+                width: '573.4000244140625px',
+                height: '196.4600067138672px',
+                borderRadius: '21px',
+                borderWidth: '1.33px',
+                paddingTop: '16px',
+                paddingRight: '32px',
+                paddingBottom: '16px',
+                paddingLeft: '32px',
+                background: '#DDDDDD3D',
+                border: '1.33px solid',
+                borderImageSource: 'linear-gradient(162.62deg, #FFFFFF 12.36%, rgba(255, 255, 255, 0.6) 32.02%, rgba(255, 255, 255, 0) 38.89%, rgba(255, 255, 255, 0) 51.76%, rgba(255, 255, 255, 0.6) 58.23%, rgba(255, 255, 255, 0.8) 77.89%)',
+                backdropFilter: 'blur(6px)',
+                boxShadow: '2px 4px 8px 0px #00000014'
+              }}>
+                <div className="text-center">
+                  <h3 className="text-lg font-bold mb-2 text-white">Liquidity Pool</h3>
+                  <p className="text-sm text-gray-300">Locked & Renounced via UNCX Network</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
