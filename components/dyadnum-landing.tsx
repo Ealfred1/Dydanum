@@ -56,7 +56,7 @@ export function DyadnumLanding() {
       />
       
       {/* Shaped Header */}
-      <div className="fixed top-0 left-0 right-0 z-50">
+      <div className="sticky top-0 left-0 right-0 z-50 w-full">
         <div className="w-full h-[55px] relative">
           {/* SVG Background */}
           <div className="absolute inset-0">
